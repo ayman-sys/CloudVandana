@@ -1,4 +1,14 @@
-<label for="firstName">First Name *</label>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <form id="surveyForm">
+       <label for="firstName">First Name *</label>
         <input type="text" id="firstName" required><br>
 
         <label for="lastName">Last Name *</label>
@@ -11,6 +21,7 @@
         <select id="country" required>
             <option value="USA">USA</option>
             <option value="Canada">Canada</option>
+            <option value="India">India</option>
             <!-- Add more countries as needed -->
         </select><br>
 
@@ -27,5 +38,16 @@
         <label for="mobile">Mobile Number *</label>
         <input type="tel" id="mobile" required><br>
 
+        
         <button type="button" onclick="submitForm()">Submit</button>
         <button type="button" onclick="resetForm()">Reset</button>
+    </form>
+
+    <div id="popup" style="display:none;">
+        <h2>Survey Results</h2>
+        <div id="popupContent"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
